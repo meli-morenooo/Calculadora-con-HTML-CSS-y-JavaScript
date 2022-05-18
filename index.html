@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <!-- Fuente de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link href="/estilos.css" rel="stylesheet"/>
+    
+    <!-- JavaScript -->
+    <script src="/Display.js" type="text/javascript"></script>
+    <script src="/Calculadora.js" type="text/javascript"></script>
+    <!-- Le asigno "defer" para que se cargue despues de que cargue todo el "body" -->
+    <script src="/scripts.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <h1>Calculadora con HTML, CSS y JavaScript</h1>
+    <!-- contenedor de la calculadora -->
+    <div class="container">
+        <!-- calculadora -->
+        <div class="calculadora">
+            <!-- display visual -->
+            <div class="display">
+                <!-- visualización del valor ya cargado. Visualización en parte superior del display -->
+                <div id="valor-anterior"></div>
+                <!-- visualización del valor que se esta cargando en la calculadora. Visualización en parte inferior del display -->
+                <div id="valor-actual"></div>
+            </div>
+            <!-- La calculadora va a constar de 18 botones -->
+            <!-- Asigno 2 columnas al boton "C" para darle la vista deseada -->
+            <button class="col-2" onclick="display.borrarTodo()">C</button>
+            <!-- Para visualizar un simbolo se lo llama de esta forma -->
+            <button onclick="display.borrar()">&larr;</button>
+            <button class="operador" value="dividir">%</button>
+            <!-- Cargo los números de modo descendente, como en los 3 botones anteriores, para darle la visualización deseada -->
+            <button class="numero">7</button>
+            <button class="numero">8</button>
+            <button class="numero">9</button>
+            <button class="operador" value="multiplicar">x</button>
+            <button class="numero">4</button>
+            <button class="numero">5</button>
+            <button class="numero">6</button>
+            <button class="operador" value="restar">-</button>
+            <button class="numero">1</button>
+            <button class="numero">2</button>
+            <button class="numero">3</button>
+            <button class="operador" value="sumar">+</button>
+            <!-- Al igual que "C", le asigno 2 columnas a "0" -->
+            <button class="col-2 numero">0</button>
+            <!-- al simbolo "." le asigno la clase "numero" ya que va a formar parte de los mismos como indicador de número decimal -->
+            <button class="numero">.</button>
+            <button class="operador" value="igual">=</button>
+        </div>
+    </div>
+</body>
+</html>
